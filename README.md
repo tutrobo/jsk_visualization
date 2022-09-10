@@ -79,7 +79,7 @@ See [read the docs](http://jsk-visualization.readthedocs.org/en/latest/).
 | CloseAll | ✅ | ✅ | ✅ | |
 | OpenAll | ✅ | ✅ | ✅ | |
 | ScreenshotListener | ✅ | ✅ | | |
-| OverlayPickerTool | | | | |
+| OverlayPickerTool | ✅ | ✅ | ✅ | ✅ |
 
 ### ViewController
 | プラグイン | 実装着手 | ビルド | 動作確認 | 備考 |
