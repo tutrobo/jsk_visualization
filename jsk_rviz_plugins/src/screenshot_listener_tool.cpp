@@ -72,7 +72,7 @@ bool ScreenshotListenerTool::takeScreenShot(
   const std::shared_ptr<jsk_rviz_plugin_msgs::srv::Screenshot::Request> req,
   const std::shared_ptr<jsk_rviz_plugin_msgs::srv::Screenshot::Response> res)
 {
-  RCLCPP_INFO(nh_->get_logger(), "take picture: " + req->file_name);
+  // RCLCPP_INFO(nh_->get_logger(), "take picture: " + req->file_name);
   //QPixmap screenshot = QPixmap::grabWindow(context_->getViewManager()->getRenderPanel()->winId());
   // QPixmap screenshot = ->windowHandle()->screen()->grabWindow(context_->getViewManager()->getRenderPanel()->winId());
   // QString output_file = QString::fromStdString(req->file_name);

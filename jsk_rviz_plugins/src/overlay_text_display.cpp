@@ -37,7 +37,7 @@
 #include <QFontDatabase>
 #include <QPainter>
 #include <QStaticText>
-#include <QTextDocument>
+// #include <QTextDocument>
 #include <rviz_common/uniform_string_stream.hpp>
 
 #include "string_utils.hpp"

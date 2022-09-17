@@ -63,7 +63,7 @@
 #include <memory>
 #include <rclcpp/rclcpp.hpp>
 
-#include "rviz_rendering/render_system.hpp"
+// #include "rviz_rendering/render_system.hpp"
 
 namespace jsk_rviz_plugins
 {

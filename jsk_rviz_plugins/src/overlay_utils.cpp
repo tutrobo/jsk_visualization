@@ -32,6 +32,7 @@
 //#include <ros/ros.h>
 #include <rclcpp/rclcpp.hpp>
 
+#include "rviz_rendering/render_system.hpp"
 #include "rviz_utils.hpp"
 
 namespace jsk_rviz_plugins
