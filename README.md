@@ -1,5 +1,7 @@
 # jsk_visualization for ROS2
 
+[![build](https://github.com/Kotakku/jsk_visualization/actions/workflows/BuildTest.yaml/badge.svg?branch=feat%2Fros2)](https://github.com/Kotakku/jsk_visualization/actions/workflows/BuildTest.yaml)
+
 jsk visualization ros package.
 
 See [read the docs](http://jsk-visualization.readthedocs.org/en/latest/).
