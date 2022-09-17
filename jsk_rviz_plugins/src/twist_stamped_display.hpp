@@ -50,7 +50,7 @@
 //#include <rviz_common/ogre_helpers/arrow.hpp>
 //#include <rviz_common/ogre_helpers/billboard_line.hpp>
 #include "rviz_common/ros_topic_display.hpp"
-#include "rviz_rendering/objects/covariance_visual.hpp"
+// #include "rviz_rendering/objects/covariance_visual.hpp"
 #include "visibility_control.hpp"
 #endif
 
