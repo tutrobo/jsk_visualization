@@ -1,9 +1,5 @@
 # jsk_visualization for ROS2
 
-
- [![Build Status](https://travis-ci.com/jsk-ros-pkg/jsk_visualization.svg?branch=master)](https://travis-ci.com/jsk-ros-pkg/jsk_visualization)
-[![Read the Docs](https://readthedocs.org/projects/pip/badge/?version=latest)](https://jsk-visualization.readthedocs.org)
-
 jsk visualization ros package.
 
 See [read the docs](http://jsk-visualization.readthedocs.org/en/latest/).
@@ -21,6 +17,7 @@ See [read the docs](http://jsk-visualization.readthedocs.org/en/latest/).
 
 # 開発環境
 - Ubuntu 20.04(ROS2 Foxy)
+- Ubuntu 20.04(ROS2 Galactic)
 
 # 実装状況
 ## jsk_rviz_plugins
@@ -79,7 +76,7 @@ See [read the docs](http://jsk-visualization.readthedocs.org/en/latest/).
 | CloseAll | ✅ | ✅ | ✅ | |
 | OpenAll | ✅ | ✅ | ✅ | |
 | ScreenshotListener | ✅ | ✅ | | |
-| OverlayPickerTool | ✅ | ✅ | ✅ | ✅ |
+| OverlayPickerTool | ✅ | ✅ | ✅ | |
 
 ### ViewController
 | プラグイン | 実装着手 | ビルド | 動作確認 | 備考 |
