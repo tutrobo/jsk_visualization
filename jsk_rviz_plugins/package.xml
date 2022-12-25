@@ -46,6 +46,7 @@
   <depend>urdf</depend>
   <depend>visualization_msgs</depend>
   <depend>diagnostic_msgs</depend>
+  <depend>actionlib_msgs</depend>
   <depend>jsk_footstep_msgs</depend>
   <depend>jsk_gui_msgs</depend>
   <depend>jsk_hark_msgs</depend>

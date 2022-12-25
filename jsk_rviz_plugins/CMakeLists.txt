@@ -16,7 +16,8 @@ find_package(ament_cmake REQUIRED)
 find_package(rviz_common REQUIRED)
 find_package(rviz_rendering REQUIRED)
 find_package(rviz_ogre_vendor REQUIRED)
-find_package(Qt5 REQUIRED COMPONENTS Widgets Test)
+find_package(Qt5Widgets REQUIRED)
+find_package(Qt5Test REQUIRED)
 find_package(image_transport REQUIRED)
 find_package(cv_bridge REQUIRED)
 
@@ -35,6 +36,7 @@ find_package(tf2_ros REQUIRED)
 find_package(urdf REQUIRED)
 find_package(visualization_msgs REQUIRED)
 find_package(diagnostic_msgs REQUIRED)
+find_package(actionlib_msgs REQUIRED)
 
 find_package(jsk_footstep_msgs REQUIRED)
 find_package(jsk_gui_msgs REQUIRED)
@@ -120,6 +122,7 @@ ament_target_dependencies(jsk_rviz_plugins
   geometry_msgs
   nav_msgs
   diagnostic_msgs
+  actionlib_msgs
   jsk_footstep_msgs
   jsk_gui_msgs
   jsk_hark_msgs
@@ -128,11 +131,11 @@ ament_target_dependencies(jsk_rviz_plugins
   jsk_topic_tools
   )
 
-target_include_directories(jsk_rviz_plugins
-  PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>
-  )
+# target_include_directories(jsk_rviz_plugins
+#   PUBLIC
+#   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+#   $<INSTALL_INTERFACE:include>
+#   )
 
 if (NOT WIN32)
   ament_environment_hooks(
@@ -151,10 +154,11 @@ pluginlib_export_plugin_description_file(rviz_common plugins_description.xml)
 # replaces catkin_package(LIBRARIES jsk_rviz_plugins) 
 ament_export_libraries(jsk_rviz_plugins)
 
-ament_export_include_directories(include)
+# ament_export_include_directories(include)
 ament_export_targets(export_jsk_rviz_plugins HAS_LIBRARY_TARGET)
 ament_export_dependencies(
-  Qt5
+  Qt5Widgets
+  Qt5Test
   rviz_common
   cv_bridge
   image_transport
@@ -171,6 +175,7 @@ ament_export_dependencies(
   urdf
   visualization_msgs
   diagnostic_msgs
+  actionlib_msgs
   jsk_footstep_msgs
   jsk_gui_msgs
   jsk_hark_msgs
@@ -190,7 +195,7 @@ install(TARGETS
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin
-  INCLUDES DESTINATION include
+  # INCLUDES DESTINATION include
   )
 
 install(DIRECTORY
