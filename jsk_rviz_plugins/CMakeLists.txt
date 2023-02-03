@@ -16,10 +16,10 @@ find_package(ament_cmake REQUIRED)
 find_package(rviz_common REQUIRED)
 find_package(rviz_rendering REQUIRED)
 find_package(rviz_ogre_vendor REQUIRED)
-find_package(Qt5Widgets REQUIRED)
-find_package(Qt5Test REQUIRED)
+find_package(Qt5 REQUIRED COMPONENTS Widgets Test)
 find_package(image_transport REQUIRED)
 find_package(cv_bridge REQUIRED)
+find_package(Boost REQUIRED)
 
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
@@ -46,7 +46,7 @@ find_package(jsk_rviz_plugin_msgs REQUIRED)
 find_package(jsk_topic_tools REQUIRED)
 
 # for Ogre include files
-include_directories(${ADDITIONAL_INCLUDE_DIRS} ${OGRE_INCLUDE_DIRS} ${OGRE_INCLUDE_DIRS}/Paging)
+include_directories(${ADDITIONAL_INCLUDE_DIRS} ${OGRE_INCLUDE_DIRS} ${OGRE_INCLUDE_DIRS}/Paging ${Boost_INCLUDE_DIRS})
 
 # Qt5 boilerplate options from http://doc.qt.io/qt-5/cmake-manual.html
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -157,8 +157,6 @@ ament_export_libraries(jsk_rviz_plugins)
 # ament_export_include_directories(include)
 ament_export_targets(export_jsk_rviz_plugins HAS_LIBRARY_TARGET)
 ament_export_dependencies(
-  Qt5Widgets
-  Qt5Test
   rviz_common
   cv_bridge
   image_transport
