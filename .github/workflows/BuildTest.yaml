@@ -48,7 +48,7 @@ jobs:
           ros2-distro: ${{ matrix.rosdistro }}
 
   build_and_test_on_jammy:
-    name: Build
+    name: Build_jammy
     runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
@@ -85,3 +85,4 @@ jobs:
         if: steps.check_rosdistro_repos_files.outputs.files_exists == 'false' && steps.check_repos_files.outputs.files_exists == 'false'
         with:
           ros2-distro: ${{ matrix.rosdistro }}
+          image-name: osrf/ros:humble-desktop-jammy
