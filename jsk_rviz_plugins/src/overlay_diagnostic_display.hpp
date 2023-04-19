@@ -37,6 +37,7 @@
 #include <OgreTexture.h>
 
 #include <QPainter>
+#include <QPainterPath>
 #include <diagnostic_msgs/msg/diagnostic_array.hpp>
 #include <diagnostic_msgs/msg/diagnostic_status.hpp>
 #include <rviz_common/properties/color_property.hpp>
