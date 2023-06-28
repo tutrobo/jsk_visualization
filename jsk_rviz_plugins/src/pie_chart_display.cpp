@@ -260,23 +260,59 @@ void PieChartDisplay::updateSize()
   mutex_.unlock();
 }
 
-void PieChartDisplay::updateTop() { top_ = top_property_->getInt(); }
+void PieChartDisplay::updateTop()
+{
+  top_ = top_property_->getInt();
+  update_required_ = true;
+}
 
-void PieChartDisplay::updateLeft() { left_ = left_property_->getInt(); }
+void PieChartDisplay::updateLeft()
+{
+  left_ = left_property_->getInt();
+  update_required_ = true;
+}
 
-void PieChartDisplay::updateBGColor() { bg_color_ = bg_color_property_->getColor(); }
+void PieChartDisplay::updateBGColor()
+{
+  bg_color_ = bg_color_property_->getColor();
+  update_required_ = true;
+}
 
-void PieChartDisplay::updateFGColor() { fg_color_ = fg_color_property_->getColor(); }
+void PieChartDisplay::updateFGColor()
+{
+  fg_color_ = fg_color_property_->getColor();
+  update_required_ = true;
+}
 
-void PieChartDisplay::updateFGAlpha() { fg_alpha_ = fg_alpha_property_->getFloat() * 255.0; }
+void PieChartDisplay::updateFGAlpha()
+{
+  fg_alpha_ = fg_alpha_property_->getFloat() * 255.0;
+  update_required_ = true;
+}
 
-void PieChartDisplay::updateFGAlpha2() { fg_alpha2_ = fg_alpha2_property_->getFloat() * 255.0; }
+void PieChartDisplay::updateFGAlpha2()
+{
+  fg_alpha2_ = fg_alpha2_property_->getFloat() * 255.0;
+  update_required_ = true;
+}
 
-void PieChartDisplay::updateBGAlpha() { bg_alpha_ = bg_alpha_property_->getFloat() * 255.0; }
+void PieChartDisplay::updateBGAlpha()
+{
+  bg_alpha_ = bg_alpha_property_->getFloat() * 255.0;
+  update_required_ = true;
+}
 
-void PieChartDisplay::updateMinValue() { min_value_ = min_value_property_->getFloat(); }
+void PieChartDisplay::updateMinValue()
+{
+  min_value_ = min_value_property_->getFloat();
+  update_required_ = true;
+}
 
-void PieChartDisplay::updateMaxValue() { max_value_ = max_value_property_->getFloat(); }
+void PieChartDisplay::updateMaxValue()
+{
+  max_value_ = max_value_property_->getFloat();
+  update_required_ = true;
+}
 
 void PieChartDisplay::updateTextSize()
 {
@@ -287,9 +323,14 @@ void PieChartDisplay::updateTextSize()
   font.setPointSize(text_size_);
   caption_offset_ = QFontMetrics(font).height();
   mutex_.unlock();
+  update_required_ = true;
 }
 
-void PieChartDisplay::updateShowCaption() { show_caption_ = show_caption_property_->getBool(); }
+void PieChartDisplay::updateShowCaption()
+{
+  show_caption_ = show_caption_property_->getBool();
+  update_required_ = true;
+}
 
 void PieChartDisplay::updateTopic()
 {
@@ -305,13 +346,19 @@ void PieChartDisplay::updateAutoColorChange()
   } else {
     max_color_property_->hide();
   }
+  update_required_ = true;
 }
 
-void PieChartDisplay::updateMaxColor() { max_color_ = max_color_property_->getColor(); }
+void PieChartDisplay::updateMaxColor()
+{
+  max_color_ = max_color_property_->getColor();
+  update_required_ = true;
+}
 
 void PieChartDisplay::updateClockwiseRotate()
 {
   clockwise_rotate_ = clockwise_rotate_property_->getBool();
+  update_required_ = true;
 }
 
 bool PieChartDisplay::isInRegion(int x, int y)
@@ -321,8 +368,8 @@ bool PieChartDisplay::isInRegion(int x, int y)
 
 void PieChartDisplay::movePosition(int x, int y)
 {
-  top_ = y;
-  left_ = x;
+  top_property_->setValue(y);
+  left_property_->setValue(x);
 }
 
 void PieChartDisplay::setPosition(int x, int y)

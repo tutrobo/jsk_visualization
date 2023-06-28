@@ -54,6 +54,7 @@
 #include "pie_chart_display.hpp"
 #include "plotter_2d_display.hpp"
 #include "rviz_utils.hpp"
+#include "string_display.hpp"
 
 namespace jsk_rviz_plugins
 {
@@ -101,6 +102,8 @@ bool OverlayPickerTool::handleDisplayClick(
   } else {
     if (startMovement<OverlayTextDisplay>(property, event, "overlay_text_display")) {
       return true;
+    } else if (startMovement<StringDisplay>(property, event, "string_display")) {
+      return true;
     } else if (startMovement<Plotter2DDisplay>(property, event, "plotter_2d_display")) {
       return true;
     } else if (startMovement<PieChartDisplay>(property, event, "pie_chart_display")) {
@@ -139,6 +142,8 @@ void OverlayPickerTool::onMove(rviz_common::ViewportMouseEvent & event)
   if (target_property_) {
     if (target_property_type_ == "overlay_text_display") {
       movePosition<OverlayTextDisplay>(event);
+    } else if (target_property_type_ == "string_display") {
+      movePosition<StringDisplay>(event);
     } else if (target_property_type_ == "plotter_2d_display") {
       movePosition<Plotter2DDisplay>(event);
     } else if (target_property_type_ == "pie_chart_display") {
@@ -163,6 +168,8 @@ void OverlayPickerTool::onRelease(rviz_common::ViewportMouseEvent & event)
   if (target_property_) {
     if (target_property_type_ == "overlay_text_display") {
       setPosition<OverlayTextDisplay>(event);
+    } else if (target_property_type_ == "string_display") {
+      setPosition<StringDisplay>(event);
     } else if (target_property_type_ == "plotter_2d_display") {
       setPosition<Plotter2DDisplay>(event);
     } else if (target_property_type_ == "pie_chart_display") {

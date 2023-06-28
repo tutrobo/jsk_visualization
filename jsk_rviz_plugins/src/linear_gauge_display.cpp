@@ -433,8 +433,8 @@ bool LinearGaugeDisplay::isInRegion(int x, int y)
 
 void LinearGaugeDisplay::movePosition(int x, int y)
 {
-  top_ = y;
-  left_ = x;
+  top_property_->setValue(y);
+  left_property_->setValue(x);
 }
 
 void LinearGaugeDisplay::setPosition(int x, int y)

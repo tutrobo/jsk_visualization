@@ -61,18 +61,18 @@
          type="jsk_rviz_plugins::PictogramArrayDisplay"
          base_class_type="rviz_common::Display">
     <description>
-      visualize jsk_rviz_plugins/msg/PictogramArray
+      visualize jsk_rviz_plugin_msgs/msg/PictogramArray
     </description>
-    <message_type>jsk_rviz_plugins/msg/PictogramArray</message_type>
+    <message_type>jsk_rviz_plugin_msgs/msg/PictogramArray</message_type>
   </class>
 
   <class name="jsk_rviz_plugin/Pictogram"
          type="jsk_rviz_plugins::PictogramDisplay"
          base_class_type="rviz_common::Display">
     <description>
-      visualize jsk_rviz_plugins/msg/Pictogram
+      visualize jsk_rviz_plugin_msgs/msg/Pictogram
     </description>
-    <message_type>jsk_rviz_plugins/msg/Pictogram</message_type>
+    <message_type>jsk_rviz_plugin_msgs/msg/Pictogram</message_type>
   </class>
 
   
@@ -184,7 +184,7 @@
     <description>
       Displays text as overlay
     </description>
-    <message_type>jsk_rviz_plugins/msg/OverlayText</message_type>
+    <message_type>jsk_rviz_plugin_msgs/msg/OverlayText</message_type>
   </class>
   <class name="jsk_rviz_plugin/OverlayMenu"
          type="jsk_rviz_plugins::OverlayMenuDisplay"
@@ -192,7 +192,7 @@
     <description>
       Displays menu as overlay
     </description>
-    <message_type>jsk_rviz_plugins/msg/OverlayMenu</message_type>
+    <message_type>jsk_rviz_plugin_msgs/msg/OverlayMenu</message_type>
   </class>
   <class name="jsk_rviz_plugin/OverlayImage"
          type="jsk_rviz_plugins::OverlayImageDisplay"
