@@ -428,8 +428,8 @@ bool StringDisplay::isInRegion(int x, int y)
 
 void StringDisplay::movePosition(int x, int y)
 {
-  top_ = y;
-  left_ = x;
+  top_property_->setValue(y);
+  left_property_->setValue(x);
 }
 
 void StringDisplay::setPosition(int x, int y)
