@@ -53,8 +53,8 @@
 #include "overlay_text_display.hpp"
 #include "pie_chart_display.hpp"
 #include "plotter_2d_display.hpp"
-#include "string_display.hpp"
 #include "rviz_utils.hpp"
+#include "string_display.hpp"
 
 namespace jsk_rviz_plugins
 {

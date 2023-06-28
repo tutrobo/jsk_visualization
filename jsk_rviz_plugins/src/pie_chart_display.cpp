@@ -260,43 +260,43 @@ void PieChartDisplay::updateSize()
   mutex_.unlock();
 }
 
-void PieChartDisplay::updateTop() 
+void PieChartDisplay::updateTop()
 {
   top_ = top_property_->getInt();
   update_required_ = true;
 }
 
-void PieChartDisplay::updateLeft() 
+void PieChartDisplay::updateLeft()
 {
   left_ = left_property_->getInt();
   update_required_ = true;
 }
 
-void PieChartDisplay::updateBGColor() 
+void PieChartDisplay::updateBGColor()
 {
   bg_color_ = bg_color_property_->getColor();
   update_required_ = true;
 }
 
-void PieChartDisplay::updateFGColor() 
+void PieChartDisplay::updateFGColor()
 {
   fg_color_ = fg_color_property_->getColor();
   update_required_ = true;
 }
 
-void PieChartDisplay::updateFGAlpha() 
+void PieChartDisplay::updateFGAlpha()
 {
   fg_alpha_ = fg_alpha_property_->getFloat() * 255.0;
   update_required_ = true;
 }
 
-void PieChartDisplay::updateFGAlpha2() 
+void PieChartDisplay::updateFGAlpha2()
 {
   fg_alpha2_ = fg_alpha2_property_->getFloat() * 255.0;
   update_required_ = true;
 }
 
-void PieChartDisplay::updateBGAlpha() 
+void PieChartDisplay::updateBGAlpha()
 {
   bg_alpha_ = bg_alpha_property_->getFloat() * 255.0;
   update_required_ = true;
@@ -308,11 +308,11 @@ void PieChartDisplay::updateMinValue()
   update_required_ = true;
 }
 
-void PieChartDisplay::updateMaxValue() 
+void PieChartDisplay::updateMaxValue()
 {
   max_value_ = max_value_property_->getFloat();
   update_required_ = true;
-} 
+}
 
 void PieChartDisplay::updateTextSize()
 {
@@ -326,7 +326,7 @@ void PieChartDisplay::updateTextSize()
   update_required_ = true;
 }
 
-void PieChartDisplay::updateShowCaption() 
+void PieChartDisplay::updateShowCaption()
 {
   show_caption_ = show_caption_property_->getBool();
   update_required_ = true;
